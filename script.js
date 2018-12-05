@@ -1,6 +1,6 @@
 const hero = document.querySelector(".hero");
 const text = hero.querySelector("h1");
-const walk = 100; // 100px
+const walk = 200; // 100px
 
 function shadow(e) {
     // const width = hero.offsetWidth;
@@ -14,7 +14,7 @@ function shadow(e) {
     }
 
     const xWalk = Math.round((x / width) * walk - walk / 2);
-    const yWalk = Math.round((y / width) * walk - walk / 2);
+    const yWalk = Math.round((y / height) * walk - walk / 2);
     console.log(xWalk, yWalk);
 
     text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(255, 0, 255, 0.7),
@@ -23,7 +23,7 @@ function shadow(e) {
                                  ${yWalk}px ${xWalk *
         -1}px 0 rgba(0, 255, 0, 0.7),
                                  ${yWalk *
-                                     -1}px ${xWalk}px 0 rgba(0, 233, 255, 0.7)`;
+                                     -1}px ${xWalk}px 0 rgba(0, 123, 255, 0.7)`;
 }
 
 hero.addEventListener("mousemove", shadow);
